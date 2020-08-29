@@ -1,4 +1,4 @@
-package ru.pet.kami.controller
+package ru.pet.kami.biz.core
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
