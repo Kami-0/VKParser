@@ -24,6 +24,8 @@
     <properties>
         <spring-boot-starter-parent>2.3.3.RELEASE</spring-boot-starter-parent>
         <kotlin.version>1.4.0</kotlin.version>
+        <sdk.version>0.5.12</sdk.version>
+        <slf4j-jdk14.version>1.7.22</slf4j-jdk14.version>
     </properties>
 
     <dependencies>
