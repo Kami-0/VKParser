@@ -8,7 +8,7 @@ import ru.pet.kami.sdk.VkSdkApi
 import java.time.Instant
 
 @Repository
-class VkRepository(
+class Repository(
     private val vkSdkApi: VkSdkApi
 ) : VkRepositoryApi {
     override fun getPostByDateRange(ownerId: Int, startDate: Instant, finishDate: Instant): List<WallPostFull> {
@@ -18,7 +18,7 @@ class VkRepository(
 
         do {
             val posts = vkSdkApi.getPostsFromGroupWall(ownerId)
-            val lastDate = posts?.items?.last()?.date!!
+            val lastDate = posts?.items?.last()?.date!! ?: TODO("реализовать исключение при плохом ответе от вк")
             when {
                 lastDate < startDateUT -> continue
                 lastDate in startDateUT..finishDateUT -> {
